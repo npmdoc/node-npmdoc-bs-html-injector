@@ -1,0 +1,2472 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/shakyshane/html-injector#readme"
+
+    >bs-html-injector (v3.0.3)</a>
+</h1>
+<h4>Inject only HTML that has changed.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bs-html-injector">module bs-html-injector</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.html_injector">
+            function <span class="apidocSignatureSpan">bs-html-injector.</span>html_injector
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">function <span class="apidocSignatureSpan">bs-html-injector.</span>lodash_custom</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.plugin">
+            function <span class="apidocSignatureSpan">bs-html-injector.</span>plugin
+            <span class="apidocSignatureSpan">(opts, bs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bs-html-injector.</span>hooks</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bs-html-injector.</span>html_injector.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bs-html-injector.</span>injector</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bs-html-injector.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bs-html-injector.html_injector">module bs-html-injector.html_injector</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.html_injector.html_injector">
+            function <span class="apidocSignatureSpan">bs-html-injector.</span>html_injector
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.html_injector.getDiffs">
+            function <span class="apidocSignatureSpan">bs-html-injector.html_injector.</span>getDiffs
+            <span class="apidocSignatureSpan">(item1, item2, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bs-html-injector.html_injector.prototype">module bs-html-injector.html_injector.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.html_injector.prototype.getDiffs">
+            function <span class="apidocSignatureSpan">bs-html-injector.html_injector.prototype.</span>getDiffs
+            <span class="apidocSignatureSpan">(item1, item2, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.html_injector.prototype.getTasks">
+            function <span class="apidocSignatureSpan">bs-html-injector.html_injector.prototype.</span>getTasks
+            <span class="apidocSignatureSpan">(parent, diffs, restrictions, currentUrl)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.html_injector.prototype.process">
+            function <span class="apidocSignatureSpan">bs-html-injector.html_injector.prototype.</span>process
+            <span class="apidocSignatureSpan">(item1, item2, url, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bs-html-injector.injector">module bs-html-injector.injector</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.injector.compareDoms">
+            function <span class="apidocSignatureSpan">bs-html-injector.injector.</span>compareDoms
+            <span class="apidocSignatureSpan">(oldDom, newDom, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.injector.createDom">
+            function <span class="apidocSignatureSpan">bs-html-injector.injector.</span>createDom
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bs-html-injector.lodash_custom">module bs-html-injector.lodash_custom</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">function <span class="apidocSignatureSpan">bs-html-injector.</span>lodash_custom</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>_</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.assign">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>assign
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.eq">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>eq
+            <span class="apidocSignatureSpan">(value, other)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.filter">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>filter
+            <span class="apidocSignatureSpan">(collection, predicate)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.get">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>get
+            <span class="apidocSignatureSpan">(object, path, defaultValue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.hasIn">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>hasIn
+            <span class="apidocSignatureSpan">(object, path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.identity">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>identity
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.includes">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>includes
+            <span class="apidocSignatureSpan">(collection, value, fromIndex, guard)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.isArguments">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isArguments
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.isArray">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isArray
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.isArrayLike">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isArrayLike
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.isArrayLikeObject">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isArrayLikeObject
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.isBuffer">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isBuffer
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.isFunction">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isFunction
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.isLength">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isLength
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.isObject">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isObject
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.isObjectLike">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isObjectLike
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.isString">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isString
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.isSymbol">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isSymbol
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.isTypedArray">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isTypedArray
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.isUndefined">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isUndefined
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.iteratee">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>iteratee
+            <span class="apidocSignatureSpan">(func)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.keys">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>keys
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.memoize">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>memoize
+            <span class="apidocSignatureSpan">(func, resolver)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.noop">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>noop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.property">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>property
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.rest">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>rest
+            <span class="apidocSignatureSpan">(func, start)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.stubArray">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>stubArray
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.stubFalse">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>stubFalse
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.toFinite">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>toFinite
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.toInteger">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>toInteger
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.toNumber">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>toNumber
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.toString">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>toString
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.uniq">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>uniq
+            <span class="apidocSignatureSpan">(array)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.uniqBy">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>uniqBy
+            <span class="apidocSignatureSpan">(array, iteratee)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.values">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>values
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.lodash_custom.without">
+            function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>without
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bs-html-injector.utils">module bs-html-injector.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.utils.removeDupes">
+            function <span class="apidocSignatureSpan">bs-html-injector.utils.</span>removeDupes
+            <span class="apidocSignatureSpan">(differences)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bs-html-injector.utils.removeExcluded">
+            function <span class="apidocSignatureSpan">bs-html-injector.utils.</span>removeExcluded
+            <span class="apidocSignatureSpan">(diffs, excludeList)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bs-html-injector" id="apidoc.module.bs-html-injector">module bs-html-injector</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.html_injector" id="apidoc.element.bs-html-injector.html_injector">
+        function <span class="apidocSignatureSpan">bs-html-injector.</span>html_injector
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">html_injector = function (opts) {
+
+    var html = this;
+
+    if (!(html instanceof HtmlInjector)) {
+        return new HtmlInjector(opts);
+    }
+
+    html.opts = _.assign({}, defaults, opts);
+    html.cache = {};
+    html.emitCount = 0;
+
+    if (_.isUndefined(html.opts.enabled)) {
+        html.opts.enabled = true;
+    }
+
+<span class="apidocCodeCommentSpan">    /**
+     * @returns {Number}
+     */
+</span>    html.hasCached = function () {
+        return Object.keys(html.cache).length;
+    };
+
+    return html;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.plugin" id="apidoc.element.bs-html-injector.plugin">
+        function <span class="apidocSignatureSpan">bs-html-injector.</span>plugin
+        <span class="apidocSignatureSpan">(opts, bs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">plugin = function (opts, bs) {
+
+    opts = opts || {};
+
+    var logger       = bs.getLogger(config.PLUGIN_NAME).info(&#x22;Running...&#x22;);
+
+    if (typeof opts.logLevel !== &#x22;undefined&#x22;) {
+        logger.setLevel(opts.logLevel);
+    }
+
+    var htmlInjector = instance = new HtmlInjector(opts, logger, bs);
+    var opts         = htmlInjector.opts;
+    var clients      = bs.io.of(bs.options.getIn([&#x22;socket&#x22;, &#x22;namespace&#x22;]));
+
+    if (bs.ui) {
+        addUiEvents();
+    }
+
+<span class="apidocCodeCommentSpan">    /**
+     * Add UI events if running
+     */
+</span>    function addUiEvents () {
+
+        var ui = bs.io.of(bs.ui.config.getIn([&#x22;socket&#x22;, &#x22;namespace&#x22;]));
+
+        bs.ui.listen(config.PLUGIN_NAME, {
+            &#x22;restriction:add&#x22;: function (data) {
+                opts.restrictions = _.uniq(opts.restrictions.concat([data]));
+                updateOptions(opts);
+            },
+            &#x22;restriction:remove&#x22;: function (data) {
+                opts.restrictions = _.without(opts.restrictions, data);
+                updateOptions(opts);
+            }
+        });
+
+        function updateOptions (opts) {
+            bs.events.emit(&#x22;plugins:opts&#x22;, {
+                name: config.PLUGIN_NAME,
+                opts: opts
+            });
+            ui.emit(&#x22;options:update&#x22;, {
+                name: config.PLUGIN_NAME,
+                opts: bs.getUserPlugin(config.PLUGIN_NAME).opts
+            });
+        }
+    }
+
+    enabled = htmlInjector.opts.enabled;
+
+    /**
+     * Configure event
+     */
+    bs.events.on(&#x22;plugins:configure&#x22;, function (data) {
+
+        if (data.name !== config.PLUGIN_NAME) {
+            return;
+        }
+
+        var msg = &#x22;{cyan:Enabled&#x22;;
+
+        if (!data.active) {
+            msg = &#x22;{yellow:Disabled&#x22;;
+        } else {
+            clients.emit(&#x22;browser:reload&#x22;);
+        }
+
+        logger.info(msg);
+
+        enabled = data.active;
+    });
+
+    /**
+     * File changed event
+     */
+    bs.events.on(&#x22;file:changed&#x22;, fileChangedEvent);
+
+    /**
+     * Internal event
+     */
+    emitter.on(config.PLUGIN_EVENT, pluginEvent);
+
+    /**
+     * Socket Connection event
+     */
+    clients.on(&#x22;connection&#x22;, handleSocketConnection);
+
+    /**
+     * Catch the above ^
+     */
+    function handleSocketConnection (client) {
+        client.on(&#x22;client:url&#x22;, handleUrlEvent);
+    }
+
+    function getRequestOptions(url) {
+        return {
+            url: url,
+            headers: {
+                &#x22;Accept&#x22;: &#x22;text/html&#x22;
+            }
+        }
+    }
+
+    /**
+     * @param data
+     */
+    function handleUrlEvent (data) {
+
+        if (!enabled) {
+
+            return;
+        }
+
+        request(getRequestOptions(data.url), function (error, response, body) {
+
+            logger.debug(&#x22;Stashing: {magenta:%s&#x22;, data.url);
+
+            if (!error &#x26;&#x26; response.statusCode == 200) {
+                htmlInjector.cache[data.url] = createDom(body);
+            }
+        });
+    }
+
+    function fileChangedEvent (data) {
+
+        if (!_.isUndefined(data.event) &#x26;&#x26; data.event !== &#x22;change&#x22;) {
+            return;
+        }
+
+        if (!enabled) {
+
+            if (opts.handoff &#x26;&#x26; data._origin !== config.PLUGIN_NAME) {
+                data.namespace = &#x22;core&#x22;;
+                data._origin = config.PLUGIN_NAME;
+                bs.events.emit(&#x22;file:changed&#x22;, data);
+            }
+
+            return;
+        }
+
+        if (data.namespace !== config.PLUGIN_NAME) {
+            debug(&#x27;Ignoring file change to &#x27;, data.path);
+            return;
+        }
+
+        debug(&#x27;Responding to file change event&#x27;, data.namespace);
+
+        requestNew(opts);
+    }
+
+    function pluginEvent () {
+
+        if (!htmlInjector.hasCached()) {
+            return;
+        }
+
+        doNewRequest();
+    }
+
+    function doNewRequest() {
+
+        if (!enabled || !htmlInjector.hasCached()) {
+            return;
+        }
+
+        logger.debug(&#x22;Getting new HTML from: {magenta:%s} urls&#x22;, Object.keys(htmlInjector.cache).length);
+
+        requestNew(opts);
+    }
+    /**
+     * Request new version of Dom
+     * @param {String} url
+     * @param {Object} opts - plugin options
+     */
+    function requestNew (opts) {
+
+        // Remove any
+        var ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bs-html-injector.html_injector" id="apidoc.module.bs-html-injector.html_injector">module bs-html-injector.html_injector</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.html_injector.html_injector" id="apidoc.element.bs-html-injector.html_injector.html_injector">
+        function <span class="apidocSignatureSpan">bs-html-injector.</span>html_injector
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">html_injector = function (opts) {
+
+    var html = this;
+
+    if (!(html instanceof HtmlInjector)) {
+        return new HtmlInjector(opts);
+    }
+
+    html.opts = _.assign({}, defaults, opts);
+    html.cache = {};
+    html.emitCount = 0;
+
+    if (_.isUndefined(html.opts.enabled)) {
+        html.opts.enabled = true;
+    }
+
+<span class="apidocCodeCommentSpan">    /**
+     * @returns {Number}
+     */
+</span>    html.hasCached = function () {
+        return Object.keys(html.cache).length;
+    };
+
+    return html;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.html_injector.getDiffs" id="apidoc.element.bs-html-injector.html_injector.getDiffs">
+        function <span class="apidocSignatureSpan">bs-html-injector.html_injector.</span>getDiffs
+        <span class="apidocSignatureSpan">(item1, item2, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDiffs = function (item1, item2, opts) {
+<span class="apidocCodeCommentSpan">    /**
+     * @param newDom
+     * @param item2
+     * @param [opts]
+     * @returns {*}
+     */
+</span>
+    opts = opts || {};
+
+    if (_.isString(item2)) {
+        item2 = createDom(item2);
+    }
+
+    var newDom  = createDom(item1);
+    var results = compareDoms(item2, newDom, opts);
+
+    if (results.length) {
+        results = results.map(function (result) {
+            result.diffs = utils.removeDupes(result.diffs);
+            result.diffs = utils.removeExcluded(result.diffs, opts.excludedTags);
+            return result;
+        });
+    }
+
+    return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param item2
+ * @param url
+ * @param opts
+ */
+HtmlInjector.prototype.process = function (item1, item2, url, opts) {
+
+var html    = this;
+var results = html.<span class="apidocCodeKeywordSpan">getDiffs</span>(item1, item2, opts);
+var out     = [];
+
+if (results.length) {
+    results.forEach(function (result) {
+        out = out.concat(html.getTasks(result.parent, result.diffs, result.restriction, url));
+    });
+    html.cache[url] = createDom(item1);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bs-html-injector.html_injector.prototype" id="apidoc.module.bs-html-injector.html_injector.prototype">module bs-html-injector.html_injector.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.html_injector.prototype.getDiffs" id="apidoc.element.bs-html-injector.html_injector.prototype.getDiffs">
+        function <span class="apidocSignatureSpan">bs-html-injector.html_injector.prototype.</span>getDiffs
+        <span class="apidocSignatureSpan">(item1, item2, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDiffs = function (item1, item2, opts) {
+<span class="apidocCodeCommentSpan">    /**
+     * @param newDom
+     * @param item2
+     * @param [opts]
+     * @returns {*}
+     */
+</span>
+    opts = opts || {};
+
+    if (_.isString(item2)) {
+        item2 = createDom(item2);
+    }
+
+    var newDom  = createDom(item1);
+    var results = compareDoms(item2, newDom, opts);
+
+    if (results.length) {
+        results = results.map(function (result) {
+            result.diffs = utils.removeDupes(result.diffs);
+            result.diffs = utils.removeExcluded(result.diffs, opts.excludedTags);
+            return result;
+        });
+    }
+
+    return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param item2
+ * @param url
+ * @param opts
+ */
+HtmlInjector.prototype.process = function (item1, item2, url, opts) {
+
+var html    = this;
+var results = html.<span class="apidocCodeKeywordSpan">getDiffs</span>(item1, item2, opts);
+var out     = [];
+
+if (results.length) {
+    results.forEach(function (result) {
+        out = out.concat(html.getTasks(result.parent, result.diffs, result.restriction, url));
+    });
+    html.cache[url] = createDom(item1);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.html_injector.prototype.getTasks" id="apidoc.element.bs-html-injector.html_injector.prototype.getTasks">
+        function <span class="apidocSignatureSpan">bs-html-injector.html_injector.prototype.</span>getTasks
+        <span class="apidocSignatureSpan">(parent, diffs, restrictions, currentUrl)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTasks = function (parent, diffs, restrictions, currentUrl) {
+
+    var tasks = [];
+
+    diffs.forEach(function (item) {
+
+        item.diff.type = item.diff.type || &#x22;node&#x22;;
+
+        var element = getElement(parent, item);
+
+        if (element &#x26;&#x26; element.domNode) {
+
+            if (item.diff.type) {
+
+                var obj = {
+                    tagName:  item.tagName,
+                    index:    item.index,
+                    cssText:  element.domNode.style.cssText,
+                    attrs:    element.attrs,
+                    diff:     item.diff,
+                    url:      currentUrl,
+                    restrictions: restrictions
+                };
+
+                switch (item.diff.type) {
+
+                    case &#x27;attribute&#x27;:
+                        // no-op, use default obj
+                        break;
+
+                    default:
+                        obj.html = element.domNode.innerHTML;
+                        break;
+                }
+
+                tasks.push(obj);
+            }
+        }
+    });
+
+    if (tasks.length) {
+        return tasks;
+    }
+
+    return [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    var html    = this;
+    var results = html.getDiffs(item1, item2, opts);
+    var out     = [];
+
+    if (results.length) {
+        results.forEach(function (result) {
+            out = out.concat(html.<span class="apidocCodeKeywordSpan">getTasks</span>(result.parent, result.diffs, result.restriction
+, url));
+        });
+        html.cache[url] = createDom(item1);
+    }
+
+    return out;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.html_injector.prototype.process" id="apidoc.element.bs-html-injector.html_injector.prototype.process">
+        function <span class="apidocSignatureSpan">bs-html-injector.html_injector.prototype.</span>process
+        <span class="apidocSignatureSpan">(item1, item2, url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">process = function (item1, item2, url, opts) {
+
+    var html    = this;
+    var results = html.getDiffs(item1, item2, opts);
+    var out     = [];
+
+    if (results.length) {
+        results.forEach(function (result) {
+            out = out.concat(html.getTasks(result.parent, result.diffs, result.restriction, url));
+        });
+        html.cache[url] = createDom(item1);
+    }
+
+    return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+            debug(&#x22;requesting %s&#x22;, url);
+
+            request(getRequestOptions(url), function (error, response, body) {
+
+                if (!error &#x26;&#x26; response.statusCode == 200) {
+
+var tasks = htmlInjector.<span class="apidocCodeKeywordSpan">process</span>(body, htmlInjector.cache[url], url, opts);
+
+if (tasks.length) {
+    debug(&#x22;%s tasks returned&#x22;, tasks.length);
+    tasks.forEach(function (task) {
+        debug(&#x22;Task: TAG: %s, INDEX: %s&#x22;, task.tagName, task.index);
+        clients.emit(config.CLIENT_EVENT, task);
+    });
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bs-html-injector.injector" id="apidoc.module.bs-html-injector.injector">module bs-html-injector.injector</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.injector.compareDoms" id="apidoc.element.bs-html-injector.injector.compareDoms">
+        function <span class="apidocSignatureSpan">bs-html-injector.injector.</span>compareDoms
+        <span class="apidocSignatureSpan">(oldDom, newDom, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compareDoms(oldDom, newDom, opts) {
+
+    opts = opts || {};
+    opts.restrictions = opts.restrictions || [];
+
+    var diffs = [];
+
+    if (!oldDom || !newDom) {
+        return diffs;
+    }
+
+    if (opts.restrictions.length) {
+        opts.restrictions.forEach(function (restriction) {
+            getResults(restriction);
+        });
+    } else {
+        getResults(&#x22;html&#x22;);
+    }
+
+    function getResults (restriction) {
+        var dom1, dom2, node;
+
+        if (restriction !== &#x22;html&#x22;) {
+            var match1 = oldDom.querySelectorAll(restriction);
+            var match2 = newDom.querySelectorAll(restriction);
+            if (match1.length &#x26;&#x26; match2.length) {
+
+                dom1 = createDom(match1[0].innerHTML);
+                dom2 = createDom(match2[0].innerHTML);
+            } else {
+                debug(&#x22;Selector %s not found&#x22;, restriction);
+            }
+        } else {
+            dom1 = oldDom;
+            dom2 = newDom;
+        }
+
+        if (!dom1 || !dom2) {
+            debug(&#x22;2 doms not found&#x22;);
+            return;
+        }
+
+        var result = compare(dom1, dom2, {
+            formatFailure: function (failure, domNode) {
+                node = domNode;
+                var allElems    = domNode.ownerDocument.getElementsByTagName(domNode.nodeName);
+                failure.index   = Array.prototype.indexOf.call(allElems, domNode);
+                failure.tagName = domNode.nodeName;
+                return failure;
+            }
+        });
+
+        var same = result.getResult(); // false cause&#x27; trees are different
+
+        if (!same) {
+            diffs.push({
+                restriction: restriction,
+                diffs:    result.getDifferences(),
+                parent:   dom2
+            });
+        }
+    }
+
+    return diffs;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.injector.createDom" id="apidoc.element.bs-html-injector.injector.createDom">
+        function <span class="apidocSignatureSpan">bs-html-injector.injector.</span>createDom
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createDom(string) {
+    return jsdom(string);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bs-html-injector.lodash_custom" id="apidoc.module.bs-html-injector.lodash_custom">module bs-html-injector.lodash_custom</a></h1>
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.assign" id="apidoc.element.bs-html-injector.lodash_custom.assign">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>assign
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assign = function () {
+  var args = arguments,
+      index = -1,
+      length = nativeMax(args.length - start, 0),
+      array = Array(length);
+
+  while (++index &#x3c; length) {
+    array[index] = args[start + index];
+  }
+  switch (start) {
+    case 0: return func.call(this, array);
+    case 1: return func.call(this, args[0], array);
+    case 2: return func.call(this, args[0], args[1], array);
+  }
+  var otherArgs = Array(start + 1);
+  index = -1;
+  while (++index &#x3c; start) {
+    otherArgs[index] = args[index];
+  }
+  otherArgs[start] = array;
+  return apply(func, this, otherArgs);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var html = this;
+
+if (!(html instanceof HtmlInjector)) {
+    return new HtmlInjector(opts);
+}
+
+html.opts = _.<span class="apidocCodeKeywordSpan">assign</span>({}, defaults, opts);
+html.cache = {};
+html.emitCount = 0;
+
+if (_.isUndefined(html.opts.enabled)) {
+    html.opts.enabled = true;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.eq" id="apidoc.element.bs-html-injector.lodash_custom.eq">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>eq
+        <span class="apidocSignatureSpan">(value, other)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function eq(value, other) {
+  return value === other || (value !== value &#x26;&#x26; other !== other);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @param {*} other The other value to compare.
+* @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+* @example
+*
+* var object = { &#x27;user&#x27;: &#x27;fred&#x27; };
+* var other = { &#x27;user&#x27;: &#x27;fred&#x27; };
+*
+* _.<span class="apidocCodeKeywordSpan">eq</span>(object, object);
+* // =&#x3e; true
+*
+* _.eq(object, other);
+* // =&#x3e; false
+*
+* _.eq(&#x27;a&#x27;, &#x27;a&#x27;);
+* // =&#x3e; true
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.filter" id="apidoc.element.bs-html-injector.lodash_custom.filter">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>filter
+        <span class="apidocSignatureSpan">(collection, predicate)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function filter(collection, predicate) {
+  var func = isArray(collection) ? arrayFilter : baseFilter;
+  return func(collection, getIteratee(predicate, 3));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+   /**
+    * @param diffs
+    * @param excludeList
+    * @returns {*}
+    */
+   removeExcluded: function (diffs, excludeList) {
+       return _.<span class="apidocCodeKeywordSpan">filter</span>(diffs, function (item) {
+           return !_.includes(excludeList, item.tagName);
+       });
+   }
+};
+
+/**
+* Not currently used... needs work.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.get" id="apidoc.element.bs-html-injector.lodash_custom.get">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>get
+        <span class="apidocSignatureSpan">(object, path, defaultValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function get(object, path, defaultValue) {
+  var result = object == null ? undefined : baseGet(object, path);
+  return result === undefined ? defaultValue : result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @private
+ * @name get
+ * @memberOf MapCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function mapCacheGet(key) {
+  return getMapData(this, key).<span class="apidocCodeKeywordSpan">get</span>(key);
+}
+
+/**
+ * Checks if a map value for `key` exists.
+ *
+ * @private
+ * @name has
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.hasIn" id="apidoc.element.bs-html-injector.lodash_custom.hasIn">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>hasIn
+        <span class="apidocSignatureSpan">(object, path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasIn(object, path) {
+  return object != null &#x26;&#x26; hasPath(object, path, baseHasIn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @param {Object} object The object to query.
+* @param {Array|string} path The path to check.
+* @returns {boolean} Returns `true` if `path` exists, else `false`.
+* @example
+*
+* var object = _.create({ &#x27;a&#x27;: _.create({ &#x27;b&#x27;: 2 }) });
+*
+* _.<span class="apidocCodeKeywordSpan">hasIn</span>(object, &#x27;a&#x27;);
+* // =&#x3e; true
+*
+* _.hasIn(object, &#x27;a.b&#x27;);
+* // =&#x3e; true
+*
+* _.hasIn(object, [&#x27;a&#x27;, &#x27;b&#x27;]);
+* // =&#x3e; true
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.identity" id="apidoc.element.bs-html-injector.lodash_custom.identity">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>identity
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(value) {
+  return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @category Util
+ * @param {*} value Any value.
+ * @returns {*} Returns `value`.
+ * @example
+ *
+ * var object = { &#x27;user&#x27;: &#x27;fred&#x27; };
+ *
+ * console.log(_.<span class="apidocCodeKeywordSpan">identity</span>(object) === object);
+ * // =&#x3e; true
+ */
+function identity(value) {
+  return value;
+}
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.includes" id="apidoc.element.bs-html-injector.lodash_custom.includes">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>includes
+        <span class="apidocSignatureSpan">(collection, value, fromIndex, guard)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function includes(collection, value, fromIndex, guard) {
+  collection = isArrayLike(collection) ? collection : values(collection);
+  fromIndex = (fromIndex &#x26;&#x26; !guard) ? toInteger(fromIndex) : 0;
+
+  var length = collection.length;
+  if (fromIndex &#x3c; 0) {
+    fromIndex = nativeMax(length + fromIndex, 0);
+  }
+  return isString(collection)
+    ? (fromIndex &#x3c;= length &#x26;&#x26; collection.indexOf(value, fromIndex) &#x3e; -1)
+    : (!!length &#x26;&#x26; baseIndexOf(collection, value, fromIndex) &#x3e; -1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   /**
+    * @param diffs
+    * @param excludeList
+    * @returns {*}
+    */
+   removeExcluded: function (diffs, excludeList) {
+       return _.filter(diffs, function (item) {
+           return !_.<span class="apidocCodeKeywordSpan">includes</span>(excludeList, item.tagName);
+       });
+   }
+};
+
+/**
+* Not currently used... needs work.
+* @param {Array} differences
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.isArguments" id="apidoc.element.bs-html-injector.lodash_custom.isArguments">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isArguments
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isArguments(value) {
+  // Safari 8.1 incorrectly makes `arguments.callee` enumerable in strict mode.
+  return isArrayLikeObject(value) &#x26;&#x26; hasOwnProperty.call(value, &#x27;callee&#x27;) &#x26;&#x26;
+    (!propertyIsEnumerable.call(value, &#x27;callee&#x27;) || objectToString.call(value) == argsTag);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is correctly classified,
+ *  else `false`.
+ * @example
+ *
+ * _.<span class="apidocCodeKeywordSpan">isArguments</span>(function() { return arguments; }());
+ * // =&#x3e; true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // =&#x3e; false
+ */
+function isArguments(value) {
+  // Safari 8.1 incorrectly makes `arguments.callee` enumerable in strict mode.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.isArray" id="apidoc.element.bs-html-injector.lodash_custom.isArray">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isArray
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isArray() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * // Returns an unwrapped value.
+ * wrapped.reduce(_.add);
+ * // =&#x3e; 6
+ *
+ * // Returns a wrapped value.
+ * var squares = wrapped.map(square);
+ *
+ * _.<span class="apidocCodeKeywordSpan">isArray</span>(squares);
+ * // =&#x3e; false
+ *
+ * _.isArray(squares.value());
+ * // =&#x3e; true
+ */
+function lodash() {
+  // No operation performed.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.isArrayLike" id="apidoc.element.bs-html-injector.lodash_custom.isArrayLike">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isArrayLike
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isArrayLike(value) {
+  return value != null &#x26;&#x26; isLength(getLength(value)) &#x26;&#x26; !isFunction(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @memberOf _
+* @since 4.0.0
+* @category Lang
+* @param {*} value The value to check.
+* @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+* @example
+*
+* _.<span class="apidocCodeKeywordSpan">isArrayLike</span>([1, 2, 3]);
+* // =&#x3e; true
+*
+* _.isArrayLike(document.body.children);
+* // =&#x3e; true
+*
+* _.isArrayLike(&#x27;abc&#x27;);
+* // =&#x3e; true
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.isArrayLikeObject" id="apidoc.element.bs-html-injector.lodash_custom.isArrayLikeObject">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isArrayLikeObject
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isArrayLikeObject(value) {
+  return isObjectLike(value) &#x26;&#x26; isArrayLike(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @since 4.0.0
+* @category Lang
+* @param {*} value The value to check.
+* @returns {boolean} Returns `true` if `value` is an array-like object,
+*  else `false`.
+* @example
+*
+* _.<span class="apidocCodeKeywordSpan">isArrayLikeObject</span>([1, 2, 3]);
+* // =&#x3e; true
+*
+* _.isArrayLikeObject(document.body.children);
+* // =&#x3e; true
+*
+* _.isArrayLikeObject(&#x27;abc&#x27;);
+* // =&#x3e; false
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.isBuffer" id="apidoc.element.bs-html-injector.lodash_custom.isBuffer">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isBuffer
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isBuffer = function (value) {
+  return value instanceof Buffer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+ * @example
+ *
+ * _.<span class="apidocCodeKeywordSpan">isBuffer</span>(new Buffer(2));
+ * // =&#x3e; true
+ *
+ * _.isBuffer(new Uint8Array(2));
+ * // =&#x3e; false
+ */
+var isBuffer = !Buffer ? stubFalse : function(value) {
+  return value instanceof Buffer;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.isFunction" id="apidoc.element.bs-html-injector.lodash_custom.isFunction">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isFunction
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isFunction(value) {
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+  // in Safari 8 which returns &#x27;object&#x27; for typed array and weak map constructors,
+  // and PhantomJS 1.9 which returns &#x27;function&#x27; for `NodeList` instances.
+  var tag = isObject(value) ? objectToString.call(value) : &#x27;&#x27;;
+  return tag == funcTag || tag == genTag;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is correctly classified,
+ *  else `false`.
+ * @example
+ *
+ * _.<span class="apidocCodeKeywordSpan">isFunction</span>(_);
+ * // =&#x3e; true
+ *
+ * _.isFunction(/abc/);
+ * // =&#x3e; false
+ */
+function isFunction(value) {
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.isLength" id="apidoc.element.bs-html-injector.lodash_custom.isLength">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isLength
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isLength(value) {
+  return typeof value == &#x27;number&#x27; &#x26;&#x26;
+    value &#x3e; -1 &#x26;&#x26; value % 1 == 0 &#x26;&#x26; value &#x3c;= MAX_SAFE_INTEGER;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @since 4.0.0
+* @category Lang
+* @param {*} value The value to check.
+* @returns {boolean} Returns `true` if `value` is a valid length,
+*  else `false`.
+* @example
+*
+* _.<span class="apidocCodeKeywordSpan">isLength</span>(3);
+* // =&#x3e; true
+*
+* _.isLength(Number.MIN_VALUE);
+* // =&#x3e; false
+*
+* _.isLength(Infinity);
+* // =&#x3e; false
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.isObject" id="apidoc.element.bs-html-injector.lodash_custom.isObject">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isObject
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isObject(value) {
+  var type = typeof value;
+  return !!value &#x26;&#x26; (type == &#x27;object&#x27; || type == &#x27;function&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @memberOf _
+* @since 0.1.0
+* @category Lang
+* @param {*} value The value to check.
+* @returns {boolean} Returns `true` if `value` is an object, else `false`.
+* @example
+*
+* _.<span class="apidocCodeKeywordSpan">isObject</span>({});
+* // =&#x3e; true
+*
+* _.isObject([1, 2, 3]);
+* // =&#x3e; true
+*
+* _.isObject(_.noop);
+* // =&#x3e; true
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.isObjectLike" id="apidoc.element.bs-html-injector.lodash_custom.isObjectLike">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isObjectLike
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isObjectLike(value) {
+  return !!value &#x26;&#x26; typeof value == &#x27;object&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @memberOf _
+* @since 4.0.0
+* @category Lang
+* @param {*} value The value to check.
+* @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+* @example
+*
+* _.<span class="apidocCodeKeywordSpan">isObjectLike</span>({});
+* // =&#x3e; true
+*
+* _.isObjectLike([1, 2, 3]);
+* // =&#x3e; true
+*
+* _.isObjectLike(_.noop);
+* // =&#x3e; false
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.isString" id="apidoc.element.bs-html-injector.lodash_custom.isString">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isString
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isString(value) {
+  return typeof value == &#x27;string&#x27; ||
+    (!isArray(value) &#x26;&#x26; isObjectLike(value) &#x26;&#x26; objectToString.call(value) == stringTag);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param item2
+ * @param [opts]
+ * @returns {*}
+ */
+
+opts = opts || {};
+
+if (_.<span class="apidocCodeKeywordSpan">isString</span>(item2)) {
+    item2 = createDom(item2);
+}
+
+var newDom  = createDom(item1);
+var results = compareDoms(item2, newDom, opts);
+
+if (results.length) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.isSymbol" id="apidoc.element.bs-html-injector.lodash_custom.isSymbol">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isSymbol
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isSymbol(value) {
+  return typeof value == &#x27;symbol&#x27; ||
+    (isObjectLike(value) &#x26;&#x26; objectToString.call(value) == symbolTag);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is correctly classified,
+ *  else `false`.
+ * @example
+ *
+ * _.<span class="apidocCodeKeywordSpan">isSymbol</span>(Symbol.iterator);
+ * // =&#x3e; true
+ *
+ * _.isSymbol(&#x27;abc&#x27;);
+ * // =&#x3e; false
+ */
+function isSymbol(value) {
+  return typeof value == &#x27;symbol&#x27; ||
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.isTypedArray" id="apidoc.element.bs-html-injector.lodash_custom.isTypedArray">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isTypedArray
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isTypedArray(value) {
+  return isObjectLike(value) &#x26;&#x26;
+    isLength(value.length) &#x26;&#x26; !!typedArrayTags[objectToString.call(value)];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @since 3.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is correctly classified,
+ *  else `false`.
+ * @example
+ *
+ * _.<span class="apidocCodeKeywordSpan">isTypedArray</span>(new Uint8Array);
+ * // =&#x3e; true
+ *
+ * _.isTypedArray([]);
+ * // =&#x3e; false
+ */
+function isTypedArray(value) {
+  return isObjectLike(value) &#x26;&#x26;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.isUndefined" id="apidoc.element.bs-html-injector.lodash_custom.isUndefined">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>isUndefined
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isUndefined(value) {
+  return value === undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    htmlInjector.cache[data.url] = createDom(body);
+}
+        });
+    }
+
+    function fileChangedEvent (data) {
+
+        if (!_.<span class="apidocCodeKeywordSpan">isUndefined</span>(data.event) &#x26;&#x26; data.event !== &#x22;change&#x22;) {
+return;
+        }
+
+        if (!enabled) {
+
+if (opts.handoff &#x26;&#x26; data._origin !== config.PLUGIN_NAME) {
+    data.namespace = &#x22;core&#x22;;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.iteratee" id="apidoc.element.bs-html-injector.lodash_custom.iteratee">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>iteratee
+        <span class="apidocSignatureSpan">(func)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function iteratee(func) {
+  return baseIteratee(typeof func == &#x27;function&#x27; ? func : baseClone(func, true));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*
+* var users = [
+*   { &#x27;user&#x27;: &#x27;barney&#x27;, &#x27;age&#x27;: 36, &#x27;active&#x27;: true },
+*   { &#x27;user&#x27;: &#x27;fred&#x27;,   &#x27;age&#x27;: 40, &#x27;active&#x27;: false }
+* ];
+*
+* // The `_.matches` iteratee shorthand.
+* _.filter(users, _.<span class="apidocCodeKeywordSpan">iteratee</span>({ &#x27;user&#x27;: &#x27;barney&#x27;, &#x27;active&#x27
+;: true }));
+* // =&#x3e; [{ &#x27;user&#x27;: &#x27;barney&#x27;, &#x27;age&#x27;: 36, &#x27;active&#x27;: true }]
+*
+* // The `_.matchesProperty` iteratee shorthand.
+* _.filter(users, _.iteratee([&#x27;user&#x27;, &#x27;fred&#x27;]));
+* // =&#x3e; [{ &#x27;user&#x27;: &#x27;fred&#x27;, &#x27;age&#x27;: 40 }]
+*
+* // The `_.property` iteratee shorthand.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.keys" id="apidoc.element.bs-html-injector.lodash_custom.keys">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>keys
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function keys(object) {
+  var isProto = isPrototype(object);
+  if (!(isProto || isArrayLike(object))) {
+    return baseKeys(object);
+  }
+  var indexes = indexKeys(object),
+      skipIndexes = !!indexes,
+      result = indexes || [],
+      length = result.length;
+
+  for (var key in object) {
+    if (baseHas(object, key) &#x26;&#x26;
+        !(skipIndexes &#x26;&#x26; (key == &#x27;length&#x27; || isIndex(key, length))) &#x26;&#x26;
+        !(isProto &#x26;&#x26; key == &#x27;constructor&#x27;)) {
+      result.push(key);
+    }
+  }
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function doNewRequest() {
+
+    if (!enabled || !htmlInjector.hasCached()) {
+        return;
+    }
+
+    logger.debug(&#x22;Getting new HTML from: {magenta:%s} urls&#x22;, Object.<span class="apidocCodeKeywordSpan">keys</span>(htmlInjector
+.cache).length);
+
+    requestNew(opts);
+}
+/**
+ * Request new version of Dom
+ * @param {String} url
+ * @param {Object} opts - plugin options
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.memoize" id="apidoc.element.bs-html-injector.lodash_custom.memoize">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>memoize
+        <span class="apidocSignatureSpan">(func, resolver)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function memoize(func, resolver) {
+  if (typeof func != &#x27;function&#x27; || (resolver &#x26;&#x26; typeof resolver != &#x27;function&#x27;)) {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  var memoized = function() {
+    var args = arguments,
+        key = resolver ? resolver.apply(this, args) : args[0],
+        cache = memoized.cache;
+
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+    var result = func.apply(this, args);
+    memoized.cache = cache.set(key, result);
+    return result;
+  };
+  memoized.cache = new (memoize.Cache || MapCache);
+  return memoized;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @param {Function} [resolver] The function to resolve the cache key.
+* @returns {Function} Returns the new memoized function.
+* @example
+*
+* var object = { &#x27;a&#x27;: 1, &#x27;b&#x27;: 2 };
+* var other = { &#x27;c&#x27;: 3, &#x27;d&#x27;: 4 };
+*
+* var values = _.<span class="apidocCodeKeywordSpan">memoize</span>(_.values);
+* values(object);
+* // =&#x3e; [1, 2]
+*
+* values(other);
+* // =&#x3e; [3, 4]
+*
+* object.a = 2;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.noop" id="apidoc.element.bs-html-injector.lodash_custom.noop">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>noop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {
+  // No operation performed.
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.property" id="apidoc.element.bs-html-injector.lodash_custom.property">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>property
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function property(path) {
+  return isKey(path) ? baseProperty(toKey(path)) : basePropertyDeep(path);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @example
+ *
+ * var objects = [
+ *   { &#x27;a&#x27;: { &#x27;b&#x27;: 2 } },
+ *   { &#x27;a&#x27;: { &#x27;b&#x27;: 1 } }
+ * ];
+ *
+ * _.map(objects, _.<span class="apidocCodeKeywordSpan">property</span>(&#x27;a.b&#x27;));
+ * // =&#x3e; [2, 1]
+ *
+ * _.map(_.sortBy(objects, _.property([&#x27;a&#x27;, &#x27;b&#x27;])), &#x27;a.b&#x27;);
+ * // =&#x3e; [1, 2]
+ */
+function property(path) {
+  return isKey(path) ? baseProperty(toKey(path)) : basePropertyDeep(path);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.rest" id="apidoc.element.bs-html-injector.lodash_custom.rest">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>rest
+        <span class="apidocSignatureSpan">(func, start)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rest(func, start) {
+  if (typeof func != &#x27;function&#x27;) {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  start = nativeMax(start === undefined ? (func.length - 1) : toInteger(start), 0);
+  return function() {
+    var args = arguments,
+        index = -1,
+        length = nativeMax(args.length - start, 0),
+        array = Array(length);
+
+    while (++index &#x3c; length) {
+      array[index] = args[start + index];
+    }
+    switch (start) {
+      case 0: return func.call(this, array);
+      case 1: return func.call(this, args[0], array);
+      case 2: return func.call(this, args[0], args[1], array);
+    }
+    var otherArgs = Array(start + 1);
+    index = -1;
+    while (++index &#x3c; start) {
+      otherArgs[index] = args[index];
+    }
+    otherArgs[start] = array;
+    return apply(func, this, otherArgs);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @since 4.0.0
+* @category Function
+* @param {Function} func The function to apply a rest parameter to.
+* @param {number} [start=func.length-1] The start position of the rest parameter.
+* @returns {Function} Returns the new function.
+* @example
+*
+* var say = _.<span class="apidocCodeKeywordSpan">rest</span>(function(what, names) {
+*   return what + &#x27; &#x27; + _.initial(names).join(&#x27;, &#x27;) +
+*     (_.size(names) &#x3e; 1 ? &#x27;, &#x26; &#x27; : &#x27;&#x27;) + _.last(names);
+* });
+*
+* say(&#x27;hello&#x27;, &#x27;fred&#x27;, &#x27;barney&#x27;, &#x27;pebbles&#x27;);
+* // =&#x3e; &#x27;hello fred, barney, &#x26; pebbles&#x27;
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.stubArray" id="apidoc.element.bs-html-injector.lodash_custom.stubArray">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>stubArray
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stubArray() {
+  return [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.stubFalse" id="apidoc.element.bs-html-injector.lodash_custom.stubFalse">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>stubFalse
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stubFalse() {
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.toFinite" id="apidoc.element.bs-html-injector.lodash_custom.toFinite">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>toFinite
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toFinite(value) {
+  if (!value) {
+    return value === 0 ? value : 0;
+  }
+  value = toNumber(value);
+  if (value === INFINITY || value === -INFINITY) {
+    var sign = (value &#x3c; 0 ? -1 : 1);
+    return sign * MAX_INTEGER;
+  }
+  return value === value ? value : 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @memberOf _
+* @since 4.12.0
+* @category Lang
+* @param {*} value The value to convert.
+* @returns {number} Returns the converted number.
+* @example
+*
+* _.<span class="apidocCodeKeywordSpan">toFinite</span>(3.2);
+* // =&#x3e; 3.2
+*
+* _.toFinite(Number.MIN_VALUE);
+* // =&#x3e; 5e-324
+*
+* _.toFinite(Infinity);
+* // =&#x3e; 1.7976931348623157e+308
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.toInteger" id="apidoc.element.bs-html-injector.lodash_custom.toInteger">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>toInteger
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toInteger(value) {
+  var result = toFinite(value),
+      remainder = result % 1;
+
+  return result === result ? (remainder ? result - remainder : result) : 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @memberOf _
+* @since 4.0.0
+* @category Lang
+* @param {*} value The value to convert.
+* @returns {number} Returns the converted integer.
+* @example
+*
+* _.<span class="apidocCodeKeywordSpan">toInteger</span>(3.2);
+* // =&#x3e; 3
+*
+* _.toInteger(Number.MIN_VALUE);
+* // =&#x3e; 0
+*
+* _.toInteger(Infinity);
+* // =&#x3e; 1.7976931348623157e+308
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.toNumber" id="apidoc.element.bs-html-injector.lodash_custom.toNumber">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>toNumber
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toNumber(value) {
+  if (typeof value == &#x27;number&#x27;) {
+    return value;
+  }
+  if (isSymbol(value)) {
+    return NAN;
+  }
+  if (isObject(value)) {
+    var other = isFunction(value.valueOf) ? value.valueOf() : value;
+    value = isObject(other) ? (other + &#x27;&#x27;) : other;
+  }
+  if (typeof value != &#x27;string&#x27;) {
+    return value === 0 ? value : +value;
+  }
+  value = value.replace(reTrim, &#x27;&#x27;);
+  var isBinary = reIsBinary.test(value);
+  return (isBinary || reIsOctal.test(value))
+    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+    : (reIsBadHex.test(value) ? NAN : +value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @memberOf _
+* @since 4.0.0
+* @category Lang
+* @param {*} value The value to process.
+* @returns {number} Returns the number.
+* @example
+*
+* _.<span class="apidocCodeKeywordSpan">toNumber</span>(3.2);
+* // =&#x3e; 3.2
+*
+* _.toNumber(Number.MIN_VALUE);
+* // =&#x3e; 5e-324
+*
+* _.toNumber(Infinity);
+* // =&#x3e; Infinity
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.toString" id="apidoc.element.bs-html-injector.lodash_custom.toString">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>toString
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString(value) {
+  return value == null ? &#x27;&#x27; : baseToString(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @memberOf _
+* @since 4.0.0
+* @category Lang
+* @param {*} value The value to process.
+* @returns {string} Returns the string.
+* @example
+*
+* _.<span class="apidocCodeKeywordSpan">toString</span>(null);
+* // =&#x3e; &#x27;&#x27;
+*
+* _.toString(-0);
+* // =&#x3e; &#x27;-0&#x27;
+*
+* _.toString([1, 2, 3]);
+* // =&#x3e; &#x27;1,2,3&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.uniq" id="apidoc.element.bs-html-injector.lodash_custom.uniq">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>uniq
+        <span class="apidocSignatureSpan">(array)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function uniq(array) {
+  return (array &#x26;&#x26; array.length)
+    ? baseUniq(array)
+    : [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+     */
+    function addUiEvents () {
+
+var ui = bs.io.of(bs.ui.config.getIn([&#x22;socket&#x22;, &#x22;namespace&#x22;]));
+
+bs.ui.listen(config.PLUGIN_NAME, {
+    &#x22;restriction:add&#x22;: function (data) {
+        opts.restrictions = _.<span class="apidocCodeKeywordSpan">uniq</span>(opts.restrictions.concat([data]));
+        updateOptions(opts);
+    },
+    &#x22;restriction:remove&#x22;: function (data) {
+        opts.restrictions = _.without(opts.restrictions, data);
+        updateOptions(opts);
+    }
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.uniqBy" id="apidoc.element.bs-html-injector.lodash_custom.uniqBy">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>uniqBy
+        <span class="apidocSignatureSpan">(array, iteratee)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function uniqBy(array, iteratee) {
+  return (array &#x26;&#x26; array.length)
+    ? baseUniq(array, getIteratee(iteratee))
+    : [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+module.exports = {
+/**
+ * @param {Array} differences
+ * @returns {Array}
+ */
+removeDupes: function(differences) {
+    return _.<span class="apidocCodeKeywordSpan">uniqBy</span>(differences, &#x22;node&#x22;);
+},
+
+/**
+ * @param diffs
+ * @param excludeList
+ * @returns {*}
+ */
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.values" id="apidoc.element.bs-html-injector.lodash_custom.values">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>values
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function values(object) {
+  return object ? baseValues(object, keys(object)) : [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.<span class="apidocCodeKeywordSpan">values</span>(new Foo);
+ * // =&#x3e; [1, 2] (iteration order is not guaranteed)
+ *
+ * _.values(&#x27;hi&#x27;);
+ * // =&#x3e; [&#x27;h&#x27;, &#x27;i&#x27;]
+ */
+function values(object) {
+  return object ? baseValues(object, keys(object)) : [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.lodash_custom.without" id="apidoc.element.bs-html-injector.lodash_custom.without">
+        function <span class="apidocSignatureSpan">bs-html-injector.lodash_custom.</span>without
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">without = function () {
+  var args = arguments,
+      index = -1,
+      length = nativeMax(args.length - start, 0),
+      array = Array(length);
+
+  while (++index &#x3c; length) {
+    array[index] = args[start + index];
+  }
+  switch (start) {
+    case 0: return func.call(this, array);
+    case 1: return func.call(this, args[0], array);
+    case 2: return func.call(this, args[0], args[1], array);
+  }
+  var otherArgs = Array(start + 1);
+  index = -1;
+  while (++index &#x3c; start) {
+    otherArgs[index] = args[index];
+  }
+  otherArgs[start] = array;
+  return apply(func, this, otherArgs);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+bs.ui.listen(config.PLUGIN_NAME, {
+    &#x22;restriction:add&#x22;: function (data) {
+        opts.restrictions = _.uniq(opts.restrictions.concat([data]));
+        updateOptions(opts);
+    },
+    &#x22;restriction:remove&#x22;: function (data) {
+        opts.restrictions = _.<span class="apidocCodeKeywordSpan">without</span>(opts.restrictions, data);
+        updateOptions(opts);
+    }
+});
+
+function updateOptions (opts) {
+    bs.events.emit(&#x22;plugins:opts&#x22;, {
+        name: config.PLUGIN_NAME,
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bs-html-injector.utils" id="apidoc.module.bs-html-injector.utils">module bs-html-injector.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.utils.removeDupes" id="apidoc.element.bs-html-injector.utils.removeDupes">
+        function <span class="apidocSignatureSpan">bs-html-injector.utils.</span>removeDupes
+        <span class="apidocSignatureSpan">(differences)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeDupes = function (differences) {
+    return _.uniqBy(differences, &#x22;node&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    var newDom  = createDom(item1);
+    var results = compareDoms(item2, newDom, opts);
+
+    if (results.length) {
+        results = results.map(function (result) {
+            result.diffs = utils.<span class="apidocCodeKeywordSpan">removeDupes</span>(result.diffs);
+            result.diffs = utils.removeExcluded(result.diffs, opts.excludedTags);
+            return result;
+        });
+    }
+
+    return results;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bs-html-injector.utils.removeExcluded" id="apidoc.element.bs-html-injector.utils.removeExcluded">
+        function <span class="apidocSignatureSpan">bs-html-injector.utils.</span>removeExcluded
+        <span class="apidocSignatureSpan">(diffs, excludeList)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeExcluded = function (diffs, excludeList) {
+    return _.filter(diffs, function (item) {
+        return !_.includes(excludeList, item.tagName);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    var newDom  = createDom(item1);
+    var results = compareDoms(item2, newDom, opts);
+
+    if (results.length) {
+        results = results.map(function (result) {
+            result.diffs = utils.removeDupes(result.diffs);
+            result.diffs = utils.<span class="apidocCodeKeywordSpan">removeExcluded</span>(result.diffs, opts.excludedTags);
+            return result;
+        });
+    }
+
+    return results;
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>

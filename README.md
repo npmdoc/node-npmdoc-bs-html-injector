@@ -1,6 +1,6 @@
 # npmdoc-bs-html-injector
 
-#### api documentation for  [bs-html-injector (v3.0.3)](https://github.com/shakyshane/html-injector#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-bs-html-injector.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-bs-html-injector) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-bs-html-injector.svg)](https://travis-ci.org/npmdoc/node-npmdoc-bs-html-injector)
+#### basic api documentation for  [bs-html-injector (v3.0.3)](https://github.com/shakyshane/html-injector#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-bs-html-injector.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-bs-html-injector) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-bs-html-injector.svg)](https://travis-ci.org/npmdoc/node-npmdoc-bs-html-injector)
 
 #### Inject only HTML that has changed.
 
@@ -86,7 +86,8 @@
         "lodash": "lodash include=isUndefined,isString,isArray,filter,assign,includes,uniqBy,uniq,without exports=node",
         "test": "mocha --reporter spec"
     },
-    "version": "3.0.3"
+    "version": "3.0.3",
+    "bin": {}
 }
 ```
 
